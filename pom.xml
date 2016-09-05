@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <artifactId>mojo-parent</artifactId>
+    <groupId>org.codehaus.mojo</groupId>
+    <version>21</version>
+  </parent>
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.ft.maven.plugins</groupId>
+  <artifactId>ft-build-info-maven-plugin</artifactId>
+  <version>1.0</version>
+  
+  <name>FT Build Info Maven Plugin</name>
+  <description> 
+    The Build Info Maven generates a properties file with build related information.
+  </description>
+  
+  <packaging>maven-plugin</packaging>
+
+  <properties>
+    <maven.api.version>2.0.6</maven.api.version>
+  </properties>
+  
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>http://anthill.svc.ft.com:8081/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model</artifactId>
+      <version>${maven.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${maven.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>${maven.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+      <version>1.5.6</version>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>
