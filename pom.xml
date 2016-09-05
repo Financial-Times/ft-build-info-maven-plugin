@@ -12,7 +12,7 @@
   
   <groupId>com.github.Financial-Times</groupId>
   <artifactId>ft-build-info-maven-plugin</artifactId>
-  <version>1.0</version>
+  <version>1.0.2</version>
   
   <name>FT Build Info Maven Plugin</name>
   <description> 
