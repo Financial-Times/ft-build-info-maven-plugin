@@ -10,7 +10,7 @@
   
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>com.ft.maven.plugins</groupId>
+  <groupId>com.github.Financial-Times</groupId>
   <artifactId>ft-build-info-maven-plugin</artifactId>
   <version>1.0</version>
   
@@ -24,13 +24,6 @@
   <properties>
     <maven.api.version>2.0.6</maven.api.version>
   </properties>
-  
-  <distributionManagement>
-    <repository>
-      <id>releases</id>
-      <url>http://anthill.svc.ft.com:8081/nexus/content/repositories/releases</url>
-    </repository>
-  </distributionManagement>
   
   <dependencies>
     <dependency>
